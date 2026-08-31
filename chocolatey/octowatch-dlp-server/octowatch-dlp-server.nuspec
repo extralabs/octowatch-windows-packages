@@ -9,50 +9,56 @@
     <projectUrl>https://octowatchdlp.com/?utm_source=chocolatey&amp;utm_medium=asset&amp;utm_campaign=choco_2026</projectUrl>
     <licenseUrl>https://octowatchdlp.com/license/</licenseUrl>
     <docsUrl>https://octowatchdlp.com/docs/</docsUrl>
+    <mailingListUrl>https://octowatchdlp.com/support/</mailingListUrl>
     <bugTrackerUrl>https://octowatchdlp.com/support/</bugTrackerUrl>
     <packageSourceUrl>https://github.com/extralabs/octowatch-windows-packages</packageSourceUrl>
-    <projectSourceUrl>https://github.com/extralabs/octowatch-windows-packages</projectSourceUrl>
-    <iconUrl>https://octowatchdlp.com/wp-content/uploads/2024/10/cropped-favicon-192x192.png</iconUrl>
+    <iconUrl>https://octowatchdlp.com/wp-content/uploads/fbrfg/apple-touch-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>On-premise OctoWatch DLP server stack for Windows employee monitoring and endpoint data protection.</summary>
+    <summary>Official silent installer for OctoWatch On-Premise Server — Windows EMS and endpoint DLP hosted on your infrastructure.</summary>
     <description><![CDATA[
-## OctoWatch Server (On-Premise)
+## OctoWatch Server
 
-Bring **Windows workforce visibility and endpoint DLP** into your own data center. This package installs the official **OctoWatch Server** distribution used for On-Premise deployments: Admin Console, monitoring services, and the Web Console host on customer infrastructure.
+**OctoWatch Server** is the On-Premise control plane for [OctoWatch DLP](https://octowatchdlp.com/) — Windows employee monitoring and endpoint data loss prevention from **KOLIBRI LLC**.
 
-### Why teams choose On-Prem OctoWatch
+This Chocolatey package downloads the signed vendor installer and runs a silent Inno Setup deployment of Server components used for self-hosted environments: Admin Console, monitoring services, and Web Console hosting on customer Windows servers.
 
-- Keep monitoring and DLP telemetry **inside your network** when Cloud is not an option
-- Investigate insider risk with activity evidence, rules hits, and console analytics
-- Scale floating licenses by **active tracked users** (console operators are unlimited)
-- Pair with Windows Grabbers on workstations and RDS sessions after Server setup
+### Who it is for
 
-### What this package does
+Security, IT, and compliance teams that need workforce activity visibility and DLP enforcement while keeping monitoring data **on their own servers** (regulated industries, air-gapped or sovereignty requirements, preference for On-Prem over Cloud).
 
-Downloads the signed installer from the official site and runs a silent Inno Setup installation:
+### Capabilities you unlock after Server is online
 
-`https://octowatchdlp.com/OWServerSetup.exe`
+- Central console for Settings, Rules, Timetable, and Computer profiles
+- Investigation workflows across activity channels and DLP **Risks** alerts
+- Floating licenses by **active tracked users** (Web Console operators are unlimited)
+- Deployment of Windows **Grabber** agents to workstations and Terminal Server / RDS sessions (Grabber is a separate installer issued from the console)
 
-### Important requirements
+### What this package installs
 
-- **Administrator** rights / machine-wide install
-- **Internet** may be required during setup so Windows can pull IIS / DISM features from Microsoft
-- **Microsoft SQL Server 2014+** (Express is commonly used) — database is **not** bundled by Chocolatey; configure SQL before or after Server install per the docs
-- After Server is ready, deploy Grabbers from the Admin Console / Web Console workflow (Grabber is a separate installer)
+- Downloads: `https://octowatchdlp.com/OWServerSetup.exe`
+- Silent switches: `/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-`
+- Does **not** embed the EXE in the `.nupkg` (official HTTPS download + SHA256)
 
-### License / trial
+### Requirements (read before installing)
 
-Commercial **shareware**. A free evaluation period is available from the vendor download page; continued production use requires a purchased license. See [pricing](https://octowatchdlp.com/pricing/) and the [license agreement](https://octowatchdlp.com/license/).
+- Windows machine with **administrator** rights
+- **Internet** may be required so Windows can enable IIS features via DISM from Microsoft
+- **Microsoft SQL Server 2014+** (Express is commonly used) — **not** installed by this package; prepare the database per the [documentation](https://octowatchdlp.com/docs/)
+- After Server setup, install Grabbers from the Admin Console / Web Console workflow
 
-### Not Octo Browser
+### License and trial
 
-**OctoWatch DLP** (KOLIBRI LLC) is Windows employee monitoring and data loss prevention software. It is **not** affiliated with Octo Browser or antidetect browser products.
+This is **commercial shareware**. A **14-day free trial** (up to **15 users**) is available from the [download page](https://octowatchdlp.com/download/). Continued production use requires a purchased license — see [pricing](https://octowatchdlp.com/pricing/) and the [license agreement](https://octowatchdlp.com/license/).
 
-### Links
+### Disambiguation
 
-- [Documentation](https://octowatchdlp.com/docs/)
-- [Updates](https://octowatchdlp.com/category/updates/)
-- [Support](https://octowatchdlp.com/support/) — info@octowatchdlp.com
+OctoWatch DLP is business monitoring software for authorized employer use on company Windows endpoints. It is **not** Octo Browser and is not affiliated with antidetect browser products.
+
+### Support
+
+- Docs: https://octowatchdlp.com/docs/
+- Product updates: https://octowatchdlp.com/category/updates/
+- Contact: info@octowatchdlp.com · https://octowatchdlp.com/support/
 ]]></description>
     <releaseNotes>https://octowatchdlp.com/category/updates/</releaseNotes>
     <tags>octowatch dlp onpremise windows admin employee-monitoring server trial license</tags>

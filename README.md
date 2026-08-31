@@ -1,29 +1,30 @@
-# OctoWatch Windows Packages
+﻿# OctoWatch Windows Packages
 
-Packaging overlays for the official **OctoWatch Server** installer (`OWServerSetup.exe`).
+Official packaging overlays for **OctoWatch Server** (`OWServerSetup.exe`) — the On-Premise control plane for [OctoWatch DLP](https://octowatchdlp.com/?utm_source=github&utm_medium=asset&utm_campaign=windows_packages_2026) by **KOLIBRI LLC**.
 
-This repository does **not** rebuild Inno Setup binaries. Packages download the signed installer from [octowatchdlp.com](https://octowatchdlp.com/?utm_source=github&utm_medium=asset&utm_campaign=windows_packages_2026) and run it silently.
+This repository does **not** rebuild Inno Setup binaries. Chocolatey, winget, and PowerShell Gallery packages download the signed installer from octowatchdlp.com and run it silently.
 
-## Scope (current)
+## Current scope
 
 | Component | Package | Status |
 |-----------|---------|--------|
-| On-Premise Server | Chocolatey `octowatch-dlp-server` | Ready to pack / push |
+| On-Premise Server | Chocolatey `octowatch-dlp-server` | Ready to push |
 | On-Premise Server | winget `OctoWatch.OctoWatchDLP.Server` | Manifests ready for PR |
-| Deploy helpers | PowerShell Gallery `OctoWatchDLP` | Module ready to publish |
+| Deploy helpers | PowerShell Gallery `OctoWatchDLP` | Ready to publish |
 | Grabber agent | — | Deferred |
 
-## Quick links
+## Product links
 
-- Product: https://octowatchdlp.com/
-- Docs: https://octowatchdlp.com/docs/
-- Download / trial: https://octowatchdlp.com/download/
+- Homepage: https://octowatchdlp.com/
+- On-Premise: https://octowatchdlp.com/on-premise/
+- Documentation: https://octowatchdlp.com/docs/
+- Trial download: https://octowatchdlp.com/download/
 - Pricing: https://octowatchdlp.com/pricing/
 - Updates: https://octowatchdlp.com/category/updates/
 - License: https://octowatchdlp.com/license/
 - Support: info@octowatchdlp.com
 
-## Install examples
+## Install (after packages are published)
 
 ### Chocolatey
 
@@ -31,7 +32,7 @@ This repository does **not** rebuild Inno Setup binaries. Packages download the 
 choco install octowatch-dlp-server -y
 ```
 
-### winget (after merge to winget-pkgs)
+### winget
 
 ```powershell
 winget install --id OctoWatch.OctoWatchDLP.Server
@@ -46,12 +47,14 @@ Install-OctoWatchServer
 
 ## Requirements
 
-- Windows with administrator rights
-- Internet access during Server setup (IIS / DISM feature download may contact Microsoft)
-- Microsoft SQL Server 2014+ for the On-Premise database (Express is commonly used; not installed by this package)
+- Administrator rights on Windows
+- Internet access may be required during Server setup (IIS / DISM feature download from Microsoft)
+- Microsoft SQL Server 2014+ for the On-Premise database (not installed by these packages)
+- 14-day trial available (up to 15 users); production use requires a license
 
-## Maintainer notes
+## Maintainer docs
 
-See [RELEASE.md](RELEASE.md) for version bumps and checksum updates.
+- [PUBLISH.md](PUBLISH.md) — accounts, API keys, push / PR steps
+- [RELEASE.md](RELEASE.md) — version and checksum updates
 
-Publisher: **KOLIBRI LLC**. OctoWatch DLP is not affiliated with Octo Browser.
+**Disambiguation:** OctoWatch DLP is Windows employee monitoring and endpoint DLP for authorized employer use. It is **not** Octo Browser.

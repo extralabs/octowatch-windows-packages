@@ -7,17 +7,17 @@ PublisherUrl: https://octowatchdlp.com/?utm_source=winget&utm_medium=asset&utm_c
 PublisherSupportUrl: https://octowatchdlp.com/support/
 Author: KOLIBRI LLC
 PackageName: OctoWatch Server
-PackageUrl: https://octowatchdlp.com/?utm_source=winget&utm_medium=asset&utm_campaign=winget_2026
-License: Proprietary (shareware / commercial license)
+PackageUrl: https://octowatchdlp.com/on-premise/?utm_source=winget&utm_medium=asset&utm_campaign=winget_2026
+License: Proprietary shareware (commercial license required after trial)
 LicenseUrl: https://octowatchdlp.com/license/
 Copyright: Copyright (c) KOLIBRI LLC
-ShortDescription: On-premise OctoWatch DLP server for Windows employee monitoring and endpoint data protection.
+ShortDescription: Self-hosted OctoWatch DLP server stack for Windows workforce monitoring and data-loss prevention.
 Description: |-
-  OctoWatch Server installs the On-Premise control plane for OctoWatch DLP — Admin Console, monitoring services, and Web Console hosting on your Windows infrastructure.
+  OctoWatch Server is the On-Premise edition of OctoWatch DLP by KOLIBRI LLC. It deploys Admin Console, monitoring services, and Web Console hosting on a Windows server so organizations can run employee monitoring and endpoint DLP without sending telemetry to a vendor cloud.
 
-  Use it when regulated teams need workforce activity visibility and endpoint DLP with data staying on customer servers. After Server setup, deploy Windows Grabbers from the console workflow. Microsoft SQL Server 2014+ is required separately. Setup may need internet access so Windows can enable IIS features via DISM.
+  Typical use: regulated or sovereignty-sensitive teams that need activity evidence, policy alerts (Risks), and Grabber-based Windows / RDS coverage after the Server is configured. Microsoft SQL Server 2014+ must be provided separately. The installer may require internet access while Windows enables IIS features through DISM.
 
-  Commercial shareware with a free trial from the vendor download page. Not affiliated with Octo Browser.
+  Commercial shareware with a 14-day trial (up to 15 users) from the vendor download page. For authorized employer use on company endpoints. Not affiliated with Octo Browser.
 Moniker: octowatch-server
 Tags:
   - dlp
@@ -29,5 +29,7 @@ ReleaseNotesUrl: https://octowatchdlp.com/category/updates/
 Documentations:
   - DocumentLabel: User documentation
     DocumentUrl: https://octowatchdlp.com/docs/
+  - DocumentLabel: On-Premise overview
+    DocumentUrl: https://octowatchdlp.com/on-premise/
 ManifestType: defaultLocale
 ManifestVersion: 1.6.0
