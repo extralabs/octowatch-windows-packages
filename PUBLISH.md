@@ -118,7 +118,10 @@ Gallery is usually live within minutes (no long Chocolatey-style queue).
 
 ## C) winget (microsoft/winget-pkgs)
 
-No API key. You need a **GitHub account** (you already have `extralabs`) and a **PR** into Microsoft’s repo.
+**Status (2026-08-31):** PR open — https://github.com/microsoft/winget-pkgs/pull/426779  
+Sign the **Microsoft CLA** on that PR if the bot asks. After merge: `winget install --id OctoWatch.OctoWatchDLP.Server`.
+
+No API key. Fork `extralabs/winget-pkgs` + PR into Microsoft’s repo. Steps below are for the next version bump.
 
 ### Option 1 — wingetcreate (easiest)
 
