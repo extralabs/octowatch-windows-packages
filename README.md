@@ -10,7 +10,7 @@ This repository does **not** rebuild Inno Setup binaries. Chocolatey, winget, an
 |-----------|---------|--------|
 | On-Premise Server | Chocolatey `octowatch-dlp-server` | Ready to push |
 | On-Premise Server | winget `OctoWatch.OctoWatchDLP.Server` | [PR #426779](https://github.com/microsoft/winget-pkgs/pull/426779) |
-| Deploy helpers | PowerShell Gallery `OctoWatchDLP` | Ready to publish |
+| Deploy helpers | PowerShell Gallery `OctoWatchDLP` | [1.0.1 live](https://www.powershellgallery.com/packages/OctoWatchDLP/1.0.1) |
 | Grabber agent | — | Deferred |
 
 ## Product links
