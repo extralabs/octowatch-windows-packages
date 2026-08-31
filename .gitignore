@@ -1,0 +1,16 @@
+﻿# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Chocolatey build
+*.nupkg
+chocolatey\**\*.nupkg
+
+# Temp installers
+*.exe
+!scripts/
+
+# IDE
+.vscode/
+.idea/
