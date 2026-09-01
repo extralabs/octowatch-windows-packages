@@ -1,0 +1,11 @@
+# Paste into "Add to Review Comments" on:
+# https://community.chocolatey.org/packages/octowatch-dlp-server/6.0.9720.19098
+
+Verification failed: Chocolatey timed out after 2700s while OWServerSetup.exe was still running (download + SHA256 OK). Gist: https://gist.github.com/choco-bot/36ff28173133ba935a0a654b40cd19e2
+
+This is the official On-Premise **OctoWatch Server** installer (~650 MB Inno Setup). Silent switches are `/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-`. The setup enables Windows IIS features via DISM and expects **Microsoft SQL Server 2014+** on the machine (SQL is not bundled). On the package verifier VM the Server install does not finish within the verifier window (hung/timeout — typical for this server stack, not a broken checksum/script).
+
+Please **exempt this package from automated verification** / approve with human review. End users install on prepared Windows servers with SQL ready.
+
+Package source: https://github.com/extralabs/octowatch-windows-packages
+Docs: https://octowatchdlp.com/docs/
